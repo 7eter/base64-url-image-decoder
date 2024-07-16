@@ -7,9 +7,9 @@
     <title>Base64 Image Decoder</title>
 </head>
 <body>
-    <h1>Base64 Image Decoder</h1>
-    <div id="imageContainer"></div>
-
+    <center>
+        <div id="imageContainer"></div>
+    </center>
     <script>
         // Function to decode base64 image from URL parameter
         function decodeBase64Image() {
@@ -17,9 +17,7 @@
             let imageUrlParam = urlParams.get('i');
 
             if (imageUrlParam) {
-                // Replace missing + symbols with +
                 imageUrlParam = imageUrlParam.replace(/ /g, '+');
-
                 const imageUrl = decodeURIComponent(imageUrlParam);
                 const imageElement = document.createElement('img');
                 imageElement.src = imageUrl;
@@ -28,7 +26,6 @@
                 console.error('No image URL provided.');
             }
         }
-
         // Call the function to decode the base64 image from the URL parameter
         decodeBase64Image();
     </script>
